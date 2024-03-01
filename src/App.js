@@ -13,11 +13,11 @@ function App() {
   }
 
   React.useEffect(async() => {
-    const url = `https://jor-test-api.vercel.app/api/get-profile?id=${selectedUserId}`;
+    const url = `https://jsonplaceholder.typicode.com/users/${selectedUserId}`;
     const res = await fetch(url);
     const json = await res.json();
 
-    setUser(json.user);
+    setUser(json);
   });
   return (
     <>
